@@ -1,15 +1,22 @@
+<!DOCTYPE html>
+
 <html>
   <head>
   <title> Number Guesser </title>
   </head>
   <body>
+    <script type="text/javascript" src= "script.js"></script>
+
     <h1 align = "center">Number Guesser</h1>
     <div class = "guess-field">
-      <input class='guess' type='number' placeholder='Enter your guess'></input>
+      <input class="guess-input" id="guess-number" type="text" placeholder= "Enter a number"></input>
     </div>
     <div class = "buttons">
-      <button type="reset">Reset the form!</button>
-      <button type="submit">Submit Your Guess</button>
+      <button>Reset the form!</button>
+      <button id = "guess-button" onclick="checkGuess()">Submit Your Guess</button>
     </div>
+
+    <p id= "message"></p>
+
   </body>
 </html>
