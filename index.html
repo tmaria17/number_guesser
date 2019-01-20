@@ -2,22 +2,23 @@
 
 <html>
   <head>
-  <title> Number Guesser </title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  <title>Number Guesser</title>
   </head>
   <body>
     <script type="text/javascript" src= "script.js"></script>
-
-    <h1 align = "center">Number Guesser</h1>
+    <nav>
+      <h1 align = "center"><span class="number">Number</span> <span class="guesser">Guesser</span></h1>
+    </nav>
     <div class = "guess-field">
       <input class="guess-input" id="guess-number" type="text" placeholder= "Enter a number"></input>
     </div>
-    <div class = "buttons">
-      <button id = "reset-button" onclick="clearForm()"> Clear</button>
-      <button id = "reset-game-button" onclick="resetGame()">Reset the Game</button>
-      <button id = "guess-button" onclick="checkGuess()">Submit Your Guess</button>
+    <div class = "buttons-div">
+      <button class = "buttons disabled" id = "reset-button" onclick="clearForm()" disabled> Clear</button>
+      <button class = "buttons disabled" id = "reset-game-button" onclick="resetGame()" disabled>Reset the Game</button>
+      <button class = "buttons" id = "guess-button" onclick="checkGuess()">Submit Your Guess</button>
     </div>
-
-
     <p id= "message"></p>
 
   </body>

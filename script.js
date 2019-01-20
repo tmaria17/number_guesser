@@ -6,7 +6,17 @@ var magicNumber = generateNumber();
 function checkGuess() {
   var guess = document.getElementById("guess-number").value;
   var message = document.getElementById("message");
-  if ( guess == magicNumber){
+  document.getElementById("reset-button").disabled = false;
+  document.getElementById("reset-game-button").disabled = false;
+  document.getElementById("reset-button").classList.remove("disabled");
+  document.getElementById("reset-game-button").classList.remove("disabled");
+  if(isNaN(guess)) {
+    alert("Please input a number");
+  }
+  else if (guess < 1 || guess > 10) {
+    alert("Your guess must be within the 1-10 range");
+  }
+  else if ( guess == magicNumber){
     message.innerHTML = `Your last guess was ${guess}. BOOM!`;
   } else if (guess > magicNumber)
   {
