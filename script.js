@@ -6,6 +6,10 @@ var magicNumber = generateNumber();
 function checkGuess() {
   var guess = document.getElementById("guess-number").value;
   var message = document.getElementById("message");
+  document.getElementById("reset-button").disabled = false;
+  document.getElementById("reset-game-button").disabled = false;
+  document.getElementById("reset-button").classList.remove("disabled");
+  document.getElementById("reset-game-button").classList.remove("disabled");
   if(isNaN(guess)) {
     alert("Please input a number");
   }
