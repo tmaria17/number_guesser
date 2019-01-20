@@ -7,14 +7,14 @@ function checkGuess() {
   var guess = document.getElementById("guess-number").value;
   var message = document.getElementById("message");
   if ( guess == magicNumber){
-    message.innerHTML = 'BOOM!';
+    message.innerHTML = `Your last guess was ${guess}. BOOM!`;
   } else if (guess > magicNumber)
   {
-    message.innerHTML = 'That is tooooo high!';
+    message.innerHTML = `Your last guess was ${guess}. That is tooooo high!`;
   }
   else
   {
-    message.innerHTML = 'That is too low!';
+    message.innerHTML = `Your last guess was ${guess}. That is too low!`;
   }
 };
 function clearForm(){
