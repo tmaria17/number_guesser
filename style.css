@@ -25,3 +25,6 @@ nav {
   border-radius: 25px;
   color: #FFFFFF;
 }
+.buttons:hover {
+  background-color: #EB008B;
+}
