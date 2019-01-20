@@ -1,4 +1,3 @@
-let submitButton = document.getElementById(".guess-button");
 
 function generateNumber() {
   return Math.floor((Math.random() * 10) + 1);
@@ -17,4 +16,7 @@ function checkGuess() {
   {
     message.innerHTML = 'That is too low!';
   }
+};
+function clearForm(){
+  document.getElementById("guess-number").value = "";
 };
