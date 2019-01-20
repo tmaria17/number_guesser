@@ -1,8 +1,8 @@
-
 function generateNumber() {
   return Math.floor((Math.random() * 10) + 1);
 }
-let magicNumber = generateNumber()
+var magicNumber = generateNumber();
+
 function checkGuess() {
   var guess = document.getElementById("guess-number").value;
   var message = document.getElementById("message");
@@ -16,7 +16,15 @@ function checkGuess() {
   {
     message.innerHTML = `Your last guess was ${guess}. That is too low!`;
   }
-};
+}
+
 function clearForm(){
   document.getElementById("guess-number").value = "";
-};
+}
+
+function resetGame() {
+  document.getElementById("guess-number").value = "";
+  generateNumber();
+  magicNumber = generateNumber();
+  message.innerHTML = '';
+}
