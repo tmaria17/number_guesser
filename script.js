@@ -6,8 +6,11 @@ var magicNumber = generateNumber();
 function checkGuess() {
   var guess = document.getElementById("guess-number").value;
   var message = document.getElementById("message");
-  if(isNaN(guess)){
+  if(isNaN(guess)) {
     alert("Please input a number");
+  }
+  else if (guess < 1 || guess > 10) {
+    alert("Your guess must be within the 1-10 range");
   }
   else if ( guess == magicNumber){
     message.innerHTML = `Your last guess was ${guess}. BOOM!`;
