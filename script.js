@@ -23,7 +23,9 @@ function checkGuess() {
     alert("Your guess must be within the range");
   }
   else if ( guess == magicNumber){
-    message.innerHTML = `Your last guess was ${guess}. BOOM!`;
+    min -= 10;
+    max += 10;
+    message.innerHTML = `Your last guess was ${guess}. BOOM! You are leveling up! Your range minimum will decrease by 10 and your range maximum will increase by 10!`;
   }
   else if (guess > magicNumber)
   {
@@ -38,10 +40,14 @@ function checkGuess() {
 function clearForm(){
   document.getElementById("guess-number").value = "";
 }
-
+function resetRange(){
+  document.getElementById("min").value = " ";
+  document.getElementById("max").value = " ";
+}
 function resetGame() {
   document.getElementById("guess-number").value = "";
   generateNumber();
   magicNumber = generateNumber();
+  resetRange()
   message.innerHTML = '';
 }
